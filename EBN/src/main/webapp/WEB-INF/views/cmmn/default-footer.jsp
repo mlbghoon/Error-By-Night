@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>  
- <footer class="sticky-footer">
-   <div class="container my-auto">
-     <div class="copyright text-center my-auto">
-       <span>Copyright © 4조</span>
-     </div>
+  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Your Website</small>
    </div>
  </footer>

@@ -5,9 +5,9 @@
 	<head>
 		<tiles:insertAttribute name="header"/>
 	</head>
-	<body>
+	<body class="d-flex flex-column">
 	<tiles:insertAttribute name="nav"/>
-	<div>
+	<div id="page-content">
 		<!-- Sidebar -->
 		<tiles:insertAttribute name="left"/>
 		<div>
