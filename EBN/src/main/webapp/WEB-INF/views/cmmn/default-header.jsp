@@ -9,23 +9,3 @@
 <link href="css/all.css" rel="stylesheet"> <!--load all styles -->
 <link rel="stylesheet" href="css/bootstrap.css">
 <title>Home</title>
-<style>
-html,
-body {
-  height: 100%;
-}
-
-#page-content {
-  flex: 1 0 auto;
-}
-
-#sticky-footer {
-  position:fixed!important;
-  flex-shrink: none;
-  bottom:0px!important;
-  width:100%;
-}
-.navbar-nav{margin-top:56px!important;}
-.navbar{position:fixed!important; width:100%; }
-.bg-dark{z-index:100;}
-</style>

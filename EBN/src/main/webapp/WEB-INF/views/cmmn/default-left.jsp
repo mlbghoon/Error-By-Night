@@ -1,4 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
+<style>
+.sidebar{
+	margin-top:56px!important;
+}
+</style>
 
  <ul class="sidebar navbar-nav">
       <li class="nav-item menu active" id="main">
