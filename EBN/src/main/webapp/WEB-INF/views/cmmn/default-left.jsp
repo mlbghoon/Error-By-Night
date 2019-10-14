@@ -1,47 +1,76 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
-<style>
-.sidebar{
-	margin-top:56px!important;
-}
-</style>
 
- <ul class="sidebar navbar-nav">
-      <li class="nav-item menu active" id="main">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>HomePage</span>
-        </a>
-      </li>
-    
-     	       		<li class="nav-item dropdown" id="admi_hide">
-     			      	<a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-     			          <i class="fas fa-fw fa-folder"></i>
-     			          <span>관리자 전용 페이지</span>
-     			        </a>
-     			        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-     			          <a class="dropdown-item" href="#">상품 정보 관리</a>
-     			          <a class="dropdown-item" href="#">사용자 목록</a>
-     			          <a class="dropdown-item" href="#">찜하기 확인</a>
-     			        </div>
-     		        </li>  
+<div>
+	<div>
+		<div class="inline-block">
+			<img class="user-pic" src="img/user.png" alt="User picture">
+		</div>
+		<a id="hide-sidebar" style="float: right;">
+			<i class="fas fa-times text-sh"></i>
+		</a>
+		<div class="inline-block">
+			<span class="user-name">자바개발자</span><br>
+			<span class="user-role">팀장</span><br>
+			<span class="user-status">
+				<strong>LV : 2</strong>
+			</span>
+		</div>
+	</div>
+        <ul>
+          <li class="sidebar-dropdown active">
+            <a class="font-size-3" href="#">
+              <i class="text-color-sh fas fa-tachometer-alt"></i>
+              <span>Menu 1</span>
+              <i class="fas fa-arrow-up text-color-sh font-size-2"></i>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Dashboard 1</a>
+                </li>
+                <li>
+                  <a href="#">Dashboard 2</a>
+                </li>
+                <li>
+                  <a href="#">Dashboard 3</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="sidebar-dropdown active">
+            <a class="font-size-3" href="#">
+              <i class="text-color-sh fas fa-shopping-cart"></i>
+              <span>Menu 2</span>
+              <i class="fas fa-arrow-up text-color-sh font-size-2"></i>
+            </a>
+            <div class="sidebar-submenu">
+              <ul>
+                <li>
+                  <a href="#">Products
 
-     		      <li class="nav-item menu" id="myPage">
-			        <a class="nav-link" href="#">
-			          <i class="fas fa-fw fa-chart-area"></i>
-			          <span>myPage</span>
-			        </a>
-			      </li>
-     
-     
-             
-      <li class="nav-item menu" id="productList">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-atlas"></i>
-          <span>판매 상품</span></a>
-      </li>
-      <li class="nav-item menu" id="board">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-table"></i>
-          <span>게시판</span></a>
-      </li>
-    </ul>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">Orders</a>
+                </li>
+                <li>
+                  <a href="#">Credit cart</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a class="font-size-3" href="#">
+              <i class="text-color-sh fas fa-book"></i>
+              <span>Menu 3</span>
+            </a>
+          </li>
+          <li>
+            <a class="font-size-3" href="#">
+              <i class="text-color-sh fas fa-folder"></i>
+              <span>Menu 4</span>
+            </a>
+          </li>
+       </ul>
+      </div>
+ 

@@ -4,21 +4,20 @@
 <html lang="en">
 	<head>
 		<tiles:insertAttribute name="header"/>
+		<tiles:insertAttribute name="scripts"/>
 	</head>
-	<body class="d-flex flex-column">
-	<tiles:insertAttribute name="nav"/>
-	<div id="page-content">
-		<!-- Sidebar -->
-		<tiles:insertAttribute name="left"/>
+	<body>
 		<div>
-			<tiles:insertAttribute name="content"/>
-			<!-- /.container-fluid -->
-			<!-- Sticky Footer -->
+			<tiles:insertAttribute name="nav"/>
+		</div>
+		<div id="left-bar" class="inline-block">
+			<tiles:insertAttribute name="left"/>
+		</div>
+		<div id="content" class="inline-block content">
+			<tiles:insertAttribute name="content"/>			
 			<tiles:insertAttribute name="footer"/>
 		</div>
-		<!-- /.content-wrapper -->
-	</div>
-		<tiles:insertAttribute name="scripts"/>
+			
 	</body>
 </html>
 		

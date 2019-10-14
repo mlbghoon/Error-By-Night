@@ -36,4 +36,11 @@ public class MainController {
 		return "main/main.tiles";
 	}
 	
+	@RequestMapping(value = "/register", method = RequestMethod.GET)
+	public String register() {
+
+		
+		return "register/register.tiles";
+	}
+	
 }
