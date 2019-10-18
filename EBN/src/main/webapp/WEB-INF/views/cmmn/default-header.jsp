@@ -18,6 +18,7 @@
 		height: 100%;
 		font-size: 14px;
 		box-sizing: border-box;	
+		min-height: 100%;
 	}
 	a {
 		text-decoration:none;
@@ -39,10 +40,35 @@
 		-moz-appearance: none; 
 		appearance: none; 
 	}
+	.input-text{
+	    -webkit-appearance: none;
+	    width: 100%;
+	    border: 0;
+	    font-family: Avenir;
+	    padding: 12px 0;
+	    height: 22px;
+	    font-size: 16px;
+	    font-weight: 500;
+	    border-bottom: 2px solid #C8CCD4;
+    }
+   
 	.hidefornow {											
 		display:none;									
 	}
-
+	.input_chk{
+		margin-bottom: 0.5rem;
+		margin-left: 1rem;
+	}
+	.terms_bx {
+		margin-top: 0.5rem;
+	}
+	.terms_box {
+		overflow: auto; 
+		width: 90%; 
+		height: 120px; 
+		padding: 10px; 
+		background-color: #eafff2;
+	}
 	.content {
 		background-color: #f8f9fc;
 		position: absolute;
@@ -62,6 +88,20 @@
 	    border: 1px solid #e3e6f0;
 	    border-radius: .35rem;
 	    margin: 5px;
+	}
+	.card-header {
+	    padding: 0.5rem;
+		position: relative;
+	    background-color: #c9d3c4;
+	    border-bottom: #5fb930;
+	    height: 2rem;
+	    text-align: left;
+	    vertical-align: middle;
+	    font-size: 1.5rem;
+	}
+	.card-oh {
+		width: 50%;
+		height: 50%;
 	}
 	.border-bottom {
 		border-bottom: 1px solid #03b07f;
@@ -88,7 +128,12 @@
 		line-height: 1.5;
 		border-radius: 0.25rem;
 		transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
+	}
+	.btn-comfirm {
+		width: 90%;
+		margin-left: 20px;
+		background-color: #03b07f;
+		
 	}
 	.flex-box {
 		display: flex;
@@ -113,6 +158,22 @@
 		margin-top: auto !important;
 		margin-bottom: auto !important;
 	}
+	.mv-1 {
+		margin-top: 1rem !important;
+		margin-bottom: 1rem !important;
+	}
+	.mv-2 {
+		margin-top: 2rem !important;
+		margin-bottom: 2rem !important;
+	}
+	.mv-3 {
+		margin-top: 3rem !important;
+		margin-bottom: 3rem !important;
+	}
+	.mv-4 {
+		margin-top: 4rem !important;
+		margin-bottom: 4rem !important;
+	}
 	.bg-cl-dark{
 		background-color: #5b5b5b;
 	}
@@ -121,6 +182,9 @@
 	}
 	.text-align-center {
 		text-align: center;
+	}
+	.block{
+		display: block!important;
 	}
 	.text-align-left {
 		text-align: left!important;

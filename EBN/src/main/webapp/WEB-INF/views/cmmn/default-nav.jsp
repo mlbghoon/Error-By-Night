@@ -22,7 +22,7 @@
 		<a class="text-color-sh" href="#">
 			<i class="fas fa-sign-in-alt"> 로그인 </i>
 		</a>
-		<a class="text-color-sh" href="/register">
+		<a class="text-color-sh" onclick="pageSubmitFn('registerTerms')">
 			<i class="fas fa-user-plus"> 회원가입 </i>
 		</a>
 	</div>

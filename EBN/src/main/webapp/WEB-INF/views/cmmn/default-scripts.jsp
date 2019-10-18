@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
+var pageSubmitFn = function(menu) {
+	location.href = menu + "?pageName=" + menu;
+}
 jQuery(function ($) {
 	$(".sidebar-dropdown > a").click(function() {		
 		if ($(this).parent().hasClass("active")) {
@@ -32,6 +35,23 @@ jQuery(function ($) {
 
 });
 $( document ).ready( function() {
+	$("#chk_all").click(function() {		/* chk_all이 클릭 됬을떄 */
+        setTerms();						/* setTerm 실행 */
+        checkTerms();						/* checkTerm 실행 */
+   })
+
+    $("#termsService").click(function() {	/* termService 클릭 됫을떄 */
+        viewTerms();						/* viewTerms 실행 */
+       
+   })
+    $("#termsInfo").click(function() {		/* termService 클릭 됫을떄 */
+        viewTerms();						/* viewTerms 실행 */
+   })
+    $("#termsEmail").click(function() {	/* termService 클릭 됫을떄 */
+        viewTerms();						/* viewTerms 실행 */
+   })
+
+	
 	var msg = "${msg}";										
 	if (msg != null && msg != "") {							
 		alert(msg);
@@ -96,6 +116,44 @@ $( document ).ready( function() {
 		$("#afterChk").addClass("hidefornow");				/* afterChk 버튼을 숨기기(클릭할 못하도록) */
 		
 	});
+	
+	function setTerms() {								/* setTerm */
+	    if ($("#chk_all").is(":checked")) {				/* 체크올이 체크 되어 있냐 아니냐에 따라 */
+	        $("#termsService").prop("checked",true);	/* 나머지 체크 박스도 모두 동일하게 바꿈 */
+	        $("#termsInfo").prop("checked",true);		/* setTerm은 chk_all을 클릭시에만 작동 */
+	        $("#termsEmail").prop("checked",true);		/* 즉 모두 선택을 눌러 바꿀떄만 모두 바낌 */
+	    } else {
+	        $("#termsService").prop("checked",false);
+	        $("#termsInfo").prop("checked",false);
+	        $("#termsEmail").prop("checked",false);
+	    }
+	    
+	    return true;
+	}
+	
+	function viewTerms() {							/* viewTerms */
+													/* 한가지의 체크 박스라도 체크 풀릴 전체 체크박스의 체크가 풀리도록 설계 */	
+													/* 세가지의 체크 박스가 모두 체크 될 떄 전체 체크박스의 체크가 되도록 설계 */
+	    if( !$("#termsService").is(":checked") || !$("#termsInfo").is(":checked") || !$("#termsEmail").is(":checked")) {
+	        $("#chk_all").prop("checked",false);
+	    }
+	
+	    if( $("#termsService").is(":checked") && $("#termsInfo").is(":checked") && $("#termsEmail").is(":checked")) {
+	        $("#chk_all").prop("checked",true);
+	    }
+	    checkTerms();								/* checkTerms 실행 */
+	}
+	
+	function checkTerms() {									/* checkTerms */
+	   if ($("#termsService").is(":checked") == false) {	/* checkTerms은 필수 항목이 체크 되어야지만 다음페이지로 이동할수  */
+		   	$("#beforChk").removeClass("hidefornow");		/* 있는 버튼을 보이게함 */
+	        $("#afterChk").addClass("hidefornow"); 
+	    } else {
+	    	$("#afterChk").removeClass("hidefornow");
+        	$("#beforChk").addClass("hidefornow");
+	    	 
+	    }
+	}
 	  
 	$("#phone").keyup(function(event){
 		var inputVal = $(this).val();					/* 핸드폰 번호 input에 글자를 입력할경우 작동 */
@@ -155,11 +213,6 @@ function check() {
 		$("#beforChk").addClass("hidefornow");									/* afterChk 버튼 숨기기 */
 		
 	}
-}
-
-  
-  
- 
 };
 
 </script>

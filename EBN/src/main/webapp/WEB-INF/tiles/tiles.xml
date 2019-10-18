@@ -16,4 +16,15 @@
 	<definition name="*/*.tiles" extends="layouts-tiles">
 	  	<put-attribute name="content"   	value="/WEB-INF/views/{1}/{2}.jsp" />
 	</definition>
+		
+	<definition name="oh-layouts-tiles" template="/WEB-INF/views/cmmn/onlyheader-layouts.jsp">
+	  	<put-attribute name="header"    	value="/WEB-INF/views/cmmn/onlyheader-header.jsp" />
+	  	<put-attribute name="content"   	value="" />
+	  	<put-attribute name="scripts"    	value="/WEB-INF/views/cmmn/default-scripts.jsp" />
+	</definition>
+	
+	
+	<definition name="*/*.ohtiles" extends="oh-layouts-tiles">
+	  	<put-attribute name="content"   	value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
 </tiles-definitions>
